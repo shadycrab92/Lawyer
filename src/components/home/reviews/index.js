@@ -3,10 +3,10 @@ import React, {Component} from "react";
 import Item from "./item";
 import "./style.sass";
 
-export default class Team extends Component {
+export default class Reviews extends Component {
   constructor() {
     super();
-    this.className="team";
+    this.className="reviews";
   }
 
   render() {
@@ -36,20 +36,15 @@ export default class Team extends Component {
       <section className={`${this.className}`}>
         <div className="columns">
           <div className="column is-12">
-            <h1 className={`${this.className}__title`}>О нас</h1>
-            <h3 className={`${this.className}__subtitle`}>
-              Наша компания специализируется в области гражданского, семейного, налогового, трудового, земельног, административного права, в вопросах защиты прав потребителей и других сферах юриспруденции.
-            </h3>
+            <h1 className={`${this.className}__title`}>Отзывы</h1>
           </div>
 
         </div>
-        <div className={`columns ${this.className}__items`}>
+        <div className={`${this.className}__items`}>
             {
               items.map((el, i) =>{
                 return  (
-                  <div key={i} className="column is-4">
-                    <Item  name={el.name} phone={el.phone} image={el.image} text={el.text}/>
-                  </div>
+                  <Item key={i} name={el.name}  image={el.image} text={el.text}/>
                 );
               })
             }

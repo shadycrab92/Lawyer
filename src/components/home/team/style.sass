@@ -2,14 +2,21 @@
 
 .team
   padding: $padding--lg
-  background: $black
+  background: $white
 
-  &__topTitle
-    text-align: center
-    color: $white
+  &__title
+    color: $black
     font-size: $font--xl
+    padding-bottom: $padding--sm
+
+  &__subtitle
+    color: $black
+    font-size: $font--sm
 
   &Item
+    box-shadow: $card-shadow
+    border: 1px solid #f9f9f9
+
     &__title
       font-weight: bold
 

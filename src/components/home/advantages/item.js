@@ -8,15 +8,16 @@ const AdvantagesItem = (props) => {
       <article className="media">
         <div className="media-left">
               <span className="icon">
-                <i className="fa fa-angle-right"></i>
+                <i className={`fa ${props.icon}`}></i>
               </span>
         </div>
         <div className="media-content">
           <div className="content">
-            <p>
+            <p className={`${className}__title`}>
               {props.name}
-              <br/>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+            </p>
+            <p className={`${className}__text`}>
+              {props.text}
             </p>
           </div>
         </div>

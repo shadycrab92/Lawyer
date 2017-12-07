@@ -12,19 +12,19 @@ export default class Advantages extends Component {
   render() {
     const items = [
       {
-        name: "Преимущество 1",
-        phone: "+7 (985) 1234567",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."
+        name: "Оперативность",
+        icon: "fa-clock-o",
+        text: "Высокая скорость принятия решений и совершения действий по вашим вопросам."
       },
       {
-        name: "Преимущество 2",
-        phone: "+7 (985) 1234567",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."
+        name: "Высокий уровень квалификации",
+        icon: "fa-level-up",
+        text: "Будьте уверены, работать над вашей задачей будет высококвалифицированный профессионал-практик."
       },
       {
-        name: "Преимущество 3",
-        phone: "+7 (985) 1234567",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."
+        name: "Экономичность",
+        icon: "fa-rub",
+        text: "Качественное и быстро решение ваших проблем помогает сэкономить вам время, силы и средства."
       }
     ];
 
@@ -36,7 +36,7 @@ export default class Advantages extends Component {
               items.map((el, i) =>{
                 return  (
                   <div key={i} className="column is-4">
-                    <Item  name={el.name} phone={el.phone} text={el.text}/>
+                    <Item  name={el.name} icon={el.icon} text={el.text}/>
                   </div>
                 );
               })

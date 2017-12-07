@@ -1,14 +1,12 @@
 @import "styles/mixins"
 @import "styles/bulma/bulma"
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans")
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed')
 
 html, body
   height: 100%
   background: $bg-color
-  font-family: "Open Sans", sans-serif
-
-
+  font-family: "Roboto Condensed", sans-serif
 
 .nav-content
   +until($desktop)
@@ -30,11 +28,15 @@ html, body
   &-body
     padding: 0 0 $padding--sm 0
 
+.box
+  border-radius: 0
+  border: 1px solid #f9f9f9
+  box-shadow: $card-shadow
+
 .container
   max-width: $container-width
 
 .button
-  padding: $padding
+  padding: $padding--sm $padding
   height: auto
-  font-size: $font--xs
-  text-transform: uppercase
+  font-size: $font--sm
