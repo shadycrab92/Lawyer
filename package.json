@@ -16,6 +16,7 @@
     "open:dist": "babel-node tools/distServer.js",
     "lint": "esw webpack.config.* src tools --color",
     "lint:watch": "npm run lint -- --watch",
+    "lint-fix": "npm run lint -- --fix",
     "clean-dist": "npm run remove-dist && mkdir dist",
     "remove-dist": "rimraf ./dist",
     "prebuild": "npm run clean-dist && npm run lint && npm run test",
@@ -48,6 +49,7 @@
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
     "babel-loader": "7.1.1",
+    "babel-plugin-module-resolver": "2.7.1",
     "babel-plugin-transform-react-constant-elements": "6.23.0",
     "babel-plugin-transform-react-remove-prop-types": "0.4.6",
     "babel-polyfill": "6.23.0",
@@ -55,6 +57,7 @@
     "babel-preset-react": "6.24.1",
     "babel-preset-react-hmre": "1.1.1",
     "babel-preset-stage-1": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
     "browser-sync": "2.18.12",
     "chalk": "2.0.1",
     "concurrently": "3.5.0",
@@ -67,6 +70,7 @@
     "eslint-plugin-import": "2.7.0",
     "eslint-plugin-react": "7.3.0",
     "eslint-watch": "3.1.2",
+    "eslint-import-resolver-babel-module": "3.0.0",
     "extract-text-webpack-plugin": "3.0.1",
     "file-loader": "0.11.2",
     "history": "4.6.0",
@@ -126,13 +130,35 @@
     ]
   },
   "babel": {
+    "presets": [
+      "react",
+      "stage-0"
+    ],
     "env": {
       "development": {
         "presets": [
           "env",
-          "react",
-          "react-hmre",
-          "stage-1"
+          "react-hmre"
+        ],
+        "plugins": [
+          [
+            "module-resolver",
+            {
+              "root": [
+                "./src"
+              ],
+              "alias": {
+                "containers": "./src/containers",
+                "components": "./src/components",
+                "reducers": "./src/reducers",
+                "layouts": "./src/layouts",
+                "styles": "./src/styles",
+                "store": "./src/store",
+                "middleware": "./src/middleware",
+                "config": "./src/config"
+              }
+            }
+          ]
         ]
       },
       "production": {
@@ -148,20 +174,32 @@
                 "uglify": true
               }
             }
-          ],
-          "react",
-          "stage-1"
+          ]
         ],
         "plugins": [
           "transform-react-constant-elements",
-          "transform-react-remove-prop-types"
+          "transform-react-remove-prop-types",
+          "module-resolver",
+          {
+            "root": [
+              "./src"
+            ],
+            "alias": {
+              "containers": "./src/containers",
+              "components": "./src/components",
+              "reducers": "./src/reducers",
+              "layouts": "./src/layouts",
+              "styles": "./src/styles",
+              "store": "./src/store",
+              "middleware": "./src/middleware",
+              "config": "./src/config"
+            }
+          }
         ]
       },
       "test": {
         "presets": [
-          "env",
-          "react",
-          "stage-1"
+          "env"
         ]
       }
     }
@@ -173,8 +211,14 @@
       "plugin:import/errors",
       "plugin:import/warnings"
     ],
+    "settings": {
+      "import/resolver": {
+        "babel-module": {}
+      }
+    },
     "plugins": [
-      "react"
+      "react",
+      "import"
     ],
     "parser": "babel-eslint",
     "parserOptions": {
@@ -193,7 +237,7 @@
       "jest": true
     },
     "rules": {
-      "quotes": 0,
+      "quotes": 1,
       "no-console": 1,
       "no-debugger": 1,
       "no-var": 1,

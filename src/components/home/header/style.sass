@@ -1,0 +1,27 @@
+@import "styles/variables"
+
+.header
+  position: relative
+
+  &__top
+    height: $header-width
+    background-size: cover
+    background-position: top
+    text-align: center
+
+  &__topContent
+    position: absolute
+    right: 50%
+    bottom: 50%
+    transform: translate(50%,50%)
+
+  &__topTitle
+    color: $white
+    font-size: $font--xxl
+
+  &__topSubtitle
+    color: $white
+    font-size: $font
+
+  &__topNavigation
+    padding-top: $padding

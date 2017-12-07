@@ -1,0 +1,40 @@
+@import "styles/mixins"
+@import "styles/bulma/bulma"
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans")
+
+html, body
+  height: 100%
+  background: $bg-color
+  font-family: "Open Sans", sans-serif
+
+
+
+.nav-content
+  +until($desktop)
+    margin: 0 25px
+
+.icon .fa
+  font-size: 1rem
+
+.modal-card
+  height: 100%
+  max-height: 100%
+  margin: 0
+
+  &-head, &-foot
+    border: none
+    background: $white
+    border-radius: 0
+
+  &-body
+    padding: 0 0 $padding--sm 0
+
+.container
+  max-width: $container-width
+
+.button
+  padding: $padding
+  height: auto
+  font-size: $font--xs
+  text-transform: uppercase
