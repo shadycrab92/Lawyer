@@ -1,0 +1,30 @@
+@import "styles/variables"
+
+.projects
+  height: 100vh
+  background: $grey
+
+  &Item
+    position: relative
+    padding: $padding
+    cursor: pointer
+
+    &--active
+      background: $white
+
+    &:hover
+      color: $primary-color
+      background: $white
+
+    &__activeIcon
+      position: absolute
+      right: 5px
+      top: 50%
+      margin-top: -12px
+
+    &__text
+      font-size: $font--xs
+
+    &__status
+      font-size: $font--xs
+

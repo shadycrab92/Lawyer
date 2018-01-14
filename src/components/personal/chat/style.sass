@@ -1,0 +1,31 @@
+@import "styles/variables"
+
+.chat
+  height: 100%
+  position: relative
+  padding: 0 $padding $padding--lg 0
+
+  &__items
+    padding: $padding 0
+
+  &__form
+    position: absolute
+    left: 0
+    right: $padding
+    bottom: $padding
+
+  &Item
+    margin-bottom: $padding--sm
+
+    &__head
+      font-size: $font--xs
+
+    &__date
+      padding-left: $padding--sm
+
+    &__text
+      font-size: $font--sm
+
+    &__image
+      overflow: hidden
+      border-radius: 100%
