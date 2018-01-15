@@ -1,22 +1,20 @@
 import React from "react";
 import classNames from "classnames";
 
-
 const ChatItem = (props) => {
   const className = "chatItem";
+
+  const headClass = classNames(`${className}__head`, {
+    [`${className}__head--right`]: props.isRight
+  });
 
   return (
     <div className={className}>
       <article className="media">
-        <div className="media-left">
-          <figure  className={`image is-32x32 ${className}__image`}>
-            <img src="https://bulma.io/images/placeholders/32x32.png" alt="Image"/>
-          </figure>
-        </div>
         <div className="media-content">
           <div className="content">
             <p>
-              <span className={`${className}__head`}>
+              <span className={headClass}>
                 <strong>
                   {props.name}
                 </strong>

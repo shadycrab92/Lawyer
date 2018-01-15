@@ -12,19 +12,21 @@ export default class Chat extends Component {
   render() {
     const items = [
       {
-        name: "John Smith",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.",
+        name: "Client",
+        text: "Lorem ipsum dolor sit amet.",
         date: "18.04.2017 в 22:00"
       },
       {
         name: "John Smith",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.",
-        date: "18.04.2017 в 22:00"
+        date: "18.04.2017 в 22:00",
+        isRight: true
       },
       {
         name: "John Smith",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.",
-        date: "18.04.2017 в 22:00"
+        date: "18.04.2017 в 22:00",
+        isRight: true
       }
     ];
 
@@ -34,7 +36,7 @@ export default class Chat extends Component {
         <div className={`${this.className}__items`}>
             {
               items.map((el, i) =>{
-                return <Item key={i} name={el.name}  text={el.text} date={el.date} />;
+                return <Item key={i} name={el.name}  text={el.text} date={el.date} isRight={el.isRight} />;
               })
             }
         </div>

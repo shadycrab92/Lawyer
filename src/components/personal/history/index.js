@@ -28,6 +28,13 @@ export default class History extends Component {
 
     return (
       <section className={`${this.className}`}>
+        <div className="has-text-centered">
+          <button className="button is-success is-rounded">
+                <span className="icon">
+                  <i className="fas fa-plus"></i>
+                </span>
+          </button>
+        </div>
         <div className={`${this.className}__items`}>
             {
               items.map((el, i) =>{

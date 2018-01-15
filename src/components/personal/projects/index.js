@@ -35,6 +35,13 @@ export default class Projects extends Component {
 
     return (
       <section className={`${this.className}`}>
+        <div className={`${this.className}__add`}>
+          <button className="button is-transparent is-rounded">
+              <span className="icon">
+                <i className="fas fa-plus"></i>
+              </span>
+          </button>
+        </div>
         <div className={`${this.className}__items`}>
             {
               items.map((el, i) =>{

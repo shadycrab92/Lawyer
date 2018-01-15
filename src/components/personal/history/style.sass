@@ -2,16 +2,58 @@
 
 .history
   height: 100%
-  padding: $padding 0
+  padding: $padding $padding $padding $padding--lg
+  position: relative
+  box-shadow: 3px 0px 5px 0 rgba(0, 0, 0, 0.11)
+
+  &:before
+    content: ""
+    width: 5px
+    margin-left: -4px
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    background-color: $grey
+    z-index: 0
 
   &Item
-    margin-bottom: $padding
+    margin-top: $padding
 
     &__head
+      font-size: $font--sm
       color: $white
-      background: $red
+      background: $green
+      border-radius: 2px
       position: relative
-      padding: $padding--sm
+      padding: $padding--sm 0.75rem
+
+      &:before
+        content: ""
+        display: block
+        width: 0
+        height: 0
+        position: absolute
+        border-top: 8px solid transparent
+        border-bottom: 8px solid transparent
+        border-right: 8px solid $green
+        left: -8px
+        top: 50%
+        margin-top: -8px
+
+    &__point
+      position: absolute
+      top: 50%
+      left: -33px
+      margin-top: -8px
+      color: $green
+      background: $white
+      border-radius: 100%
+
+    &__edit
+      font-size: $font--xs
+      float: right
+      margin-right: -2px
 
     &__date
       font-size: $font--xs
@@ -22,5 +64,6 @@
       &Item
         font-size: $font--xs
 
-        .icon
-          font-size: 0.5rem
+        &:before
+          content: '-'
+          padding-right: 3px

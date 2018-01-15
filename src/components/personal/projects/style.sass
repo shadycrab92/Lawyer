@@ -2,19 +2,25 @@
 
 .projects
   height: 100vh
-  background: $grey
+  background: $purple
+  box-shadow: 3px 0px 5px 0 rgba(0, 0, 0, 0.11)
+
+  &__add
+    text-align: center
+    padding: $padding 0
 
   &Item
+    color: $white--t2
     position: relative
     padding: $padding
     cursor: pointer
+    border-top: 1px solid rgba(255,255,255,0.05)
+    border-bottom: 1px solid rgba(0,0,0,0.05)
+    transition: .2s ease-in-out 0s
 
-    &--active
-      background: $white
-
-    &:hover
-      color: $primary-color
-      background: $white
+    &:hover, &--active
+      color: $white
+      background: $purple--dark
 
     &__activeIcon
       position: absolute
