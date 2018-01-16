@@ -2,32 +2,31 @@ import React from "react";
 import classNames from "classnames";
 
 const ChatItem = (props) => {
-  const className = "chatItem";
 
-  const headClass = classNames(`${className}__head`, {
-    [`${className}__head--right`]: props.isRight
+  const className = "chatItem";
+  const itemClassName = classNames(className, {
+    [`${className}--right`]: props.isRight
   });
 
   return (
-    <div className={className}>
+    <div className={itemClassName}>
       <article className="media">
         <div className="media-content">
           <div className="content">
-            <p>
-              <span className={headClass}>
+            <div className={`${className}__body`}>
+              <div className={`${className}__head`}>
                 <strong>
                   {props.name}
                 </strong>
                 <span className={`${className}__date`}>
                   {props.date}
                 </span>
-              </span>
+              </div>
 
-              <br/>
-              <span className={`${className}__text`}>
+              <div className={`${className}__text`}>
                 {props.text}
-              </span>
-            </p>
+              </div>
+            </div>
           </div>
         </div>
       </article>

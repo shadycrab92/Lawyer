@@ -15,13 +15,23 @@
     bottom: $padding
 
   &Item
-    margin-bottom: $padding--sm
+    margin-bottom: $padding
+
+    &--right
+      .chatItem__body
+        background: $blue-light
+        text-align: right
+        float: right
+
+    &__body
+      border-radius: 3px
+      padding: $padding--sm
+      background: $grey-lighter
+      max-width: 90%
 
     &__head
+      margin-bottom: 0.2rem
       font-size: $font--xs
-
-      &--right
-        float: right
 
     &__date
       padding-left: $padding--sm

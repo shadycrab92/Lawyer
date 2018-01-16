@@ -41,12 +41,22 @@ export default class Chat extends Component {
             }
         </div>
         <div className={`${this.className}__form`}>
-          <div className="field has-addons">
-            <div className="control is-expanded">
-              <input className="input" type="text" placeholder="Сообщение..."/>
+          <div className="field">
+          <div className="field-body">
+            <div className="field">
+              <div className="control">
+                <textarea className="textarea" placeholder="Explain how we can help you"></textarea>
+              </div>
             </div>
-            <div className="control">
-              <button type="submit" className="button is-primary">Отправить</button>
+          </div>
+          </div>
+          <div className="field">
+            <div className="field">
+              <p className="control">
+                <button className="button is-primary is-fullwidth">
+                  Отправить
+                </button>
+              </p>
             </div>
           </div>
         </div>

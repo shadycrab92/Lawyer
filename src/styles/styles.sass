@@ -52,6 +52,12 @@ html, body
   height: auto
   font-size: $font--sm
 
+  &.is-primary
+    background: $blue
+
+    &:hover
+      background: $blue-dark
+
   &.is-success
     color: $white
 
@@ -66,3 +72,14 @@ html, body
 
     &:hover
       background: transparentize($white, 0.85)
+
+.textarea:not([rows])
+  min-height: 80px
+
+.input, .textarea
+  border-color: $grey
+  box-shadow: none
+
+  &:focus
+    border-color: $primary-color
+    box-shadow: none
