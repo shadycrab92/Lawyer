@@ -12,7 +12,12 @@ const ProjectsItem = (props) => {
 
   return (
     <div className={`${itemClassName}`}>
-      <p>{props.name}</p>
+      <p>
+        {props.name}
+        <span className={`icon is-small ${className}__edit`}>
+            <i className="fas fa-edit"></i>
+          </span>
+      </p>
       <p className={`${className}__status`}>
         {props.status}
         <span className="icon">
@@ -20,12 +25,6 @@ const ProjectsItem = (props) => {
         </span>
       </p>
       <p className={`${className}__text`}>{props.text}</p>
-      {
-        props.isActive &&
-        <span className={`icon ${className}__activeIcon`}>
-              <i className="fas fa-chevron-right"></i>
-        </span>
-      }
     </div>
   );
 };

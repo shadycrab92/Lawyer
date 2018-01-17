@@ -19,7 +19,6 @@ const HistoryItem = (props) => {
         <span className={`icon is-small ${className}__point`}>
           <i className="fas fa-dot-circle"></i>
         </span>
-
       </div>
       <div className={`${className}__notices`}>
         <p className={`${className}__noticesItem`}>

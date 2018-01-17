@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 
 import Item from "./item";
+import Head from "./head";
 import "./style.sass";
 
 export default class Chat extends Component {
@@ -33,6 +34,8 @@ export default class Chat extends Component {
 
     return (
       <section className={`${this.className}`}>
+        <Head/>
+        <hr className={`${this.className}__hr`}/>
         <div className={`${this.className}__items`}>
             {
               items.map((el, i) =>{
@@ -42,13 +45,13 @@ export default class Chat extends Component {
         </div>
         <div className={`${this.className}__form`}>
           <div className="field">
-          <div className="field-body">
-            <div className="field">
-              <div className="control">
-                <textarea className="textarea" placeholder="Explain how we can help you"></textarea>
+            <div className="field-body">
+              <div className="field">
+                <div className="control">
+                  <textarea className="textarea" placeholder="Explain how we can help you"></textarea>
+                </div>
               </div>
             </div>
-          </div>
           </div>
           <div className="field">
             <div className="field">

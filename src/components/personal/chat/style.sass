@@ -5,6 +5,9 @@
   position: relative
   padding: 0 $padding $padding--lg 0
 
+  &__hr
+    margin: -1px 0 $padding 0
+
   &__items
     padding: $padding 0
 
@@ -19,14 +22,13 @@
 
     &--right
       .chatItem__body
-        background: $blue-light
         text-align: right
         float: right
 
+      .chatItem__text
+        background: $blue-light
+
     &__body
-      border-radius: 3px
-      padding: $padding--sm
-      background: $grey-lighter
       max-width: 90%
 
     &__head
@@ -37,8 +39,23 @@
       padding-left: $padding--sm
 
     &__text
+      border-radius: 3px
+      padding: $padding--sm
+      background: $grey-lighter
       font-size: $font--sm
 
     &__image
       overflow: hidden
       border-radius: 100%
+
+  &Head
+    padding: $padding 0
+
+    &__stats
+      font-size: $font--sm
+      display: inline-block
+      padding: 0.75em 0 0 0
+
+    &__buttons
+      .button
+        margin-right: $padding--sm
