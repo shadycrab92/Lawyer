@@ -32,11 +32,10 @@ export default class Projects extends Component {
       },
     ];
 
-
     return (
       <section className={`${this.className}`}>
         <div className={`${this.className}__add`}>
-          <button className="button is-transparent is-rounded">
+          <button className="button is-icon is-transparent">
               <span className="icon">
                 <i className="fas fa-plus"></i>
               </span>

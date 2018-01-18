@@ -7,21 +7,21 @@ import Chat from "components/personal/chat/index";
 
 const PersonalPage = () => {
   return (
-    <div className="pageContentWrapper">
-      <div className="columns">
-        <div className="column is-12">
-          <Navbar/>
-        </div>
+    <div className="pageRoot">
+      <div className="pageNav">
+       <Navbar/>
       </div>
-      <div className="columns pageContent">
-        <div className="column is-3">
-          <Projects/>
-        </div>
-        <div className="column is-3">
-          <History/>
-        </div>
-        <div className="column is-6">
-          <Chat/>
+      <div className="pageFixedLeftContent">
+        <Projects/>
+      </div>
+      <div className="pageContent pageContent--withFixedLeftContent">
+        <div className="columns">
+          <div className="column is-3">
+
+          </div>
+          <div className="column is-6">
+
+          </div>
         </div>
       </div>
     </div>

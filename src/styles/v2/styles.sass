@@ -1,0 +1,55 @@
+@import "styles/v2/base/_all"
+@import "styles/v2/elements/_all"
+
+@import url('https://fonts.googleapis.com/css?family=Roboto')
+
+*
+  outline: none !important
+  box-sizing: inherit
+
+  &:before,
+  &:after
+    box-sizing: inherit
+
+html, body
+  background: $grey--light
+  font-size: 14px
+  font-family: "Roboto", sans-serif
+  height: 100%
+  box-sizing: border-box
+
+#app
+  height: 100%
+
+.page
+  &Root
+    position: relative
+    display: flex
+    flex-direction: column
+    height: 100%
+    max-width: 1500px
+
+  &Content
+    background: $white
+    flex-grow: 1
+
+    &--withFixedLeftContent
+      padding-left: 25%
+
+  &FixedLeftContent
+    position: fixed
+    top: 50px
+    bottom: 0
+    width: 25%
+    max-width: 375px
+
+a
+  text-decoration: none
+
+
+p
+  margin: 0
+
+
+.is-pulled-right
+  float: right

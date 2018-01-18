@@ -1,46 +1,49 @@
-@import "styles/variables"
+@import "styles/v2/base/variables"
 
 .projects
   height: 100%
   background: $purple
-  box-shadow: 3px 0px 5px 0 rgba(0, 0, 0, 0.11)
+  overflow: auto
 
   &__add
     text-align: center
-    padding: $padding 0
-
+    padding: $gap 0
 
   &Item
-    font-size: $font--sm
-    color: $white--t2
     position: relative
-    padding: $padding $padding--lg
+    color: $white
+    padding: $gap--lg
     cursor: pointer
     border-top: 1px solid rgba(255,255,255,0.05)
     border-bottom: 1px solid rgba(0,0,0,0.05)
     transition: .2s ease-in-out 0s
 
     &:hover, &--active
-      color: $white
-
-    &--active
       background: $purple--dark
 
-    &__activeIcon
-      position: absolute
-      right: 9px
-      top: 50%
-      margin-top: -12px
+    &--active
+      .projectsItem__chevron
+        display: block
+
+    &__title
+      font-size: $font--lg
+      margin-bottom: 0rem
+
+    &__status
+      font-size: $font--sm
+      margin-bottom: 10px
 
     &__text
       max-width: 90%
-      font-size: $font--xs
+      font-size: $font--sm
+      margin-bottom: 3px
 
-    &__status
-      font-size: $font--xs
+    &__chevron
+      display: none
+      position: absolute
+      right: $gap
+      top: 50%
+      margin-top: -10px
 
-    &__edit
-      font-size: $font--xs
-      float: right
-      margin-right: -2px
-      margin-top: 2px
+      .icon
+        font-size: $font--lg

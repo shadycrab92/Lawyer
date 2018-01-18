@@ -10,13 +10,11 @@ import NotFoundPage from "containers/NotFoundPage";
 class App extends React.Component {
   render() {
     return (
-      <div className="container pageBody">
-        <Switch>
-          <Route exact path="/personal" component={HomePage} />
-          <Route exact path="/" component={PersonalPage} />
-          <Route component={NotFoundPage} />
-        </Switch>
-      </div>
+      <Switch>
+        <Route exact path="/personal" component={HomePage} />
+        <Route exact path="/" component={PersonalPage} />
+        <Route component={NotFoundPage} />
+      </Switch>
     );
   }
 }

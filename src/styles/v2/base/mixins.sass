@@ -1,0 +1,65 @@
+@import "styles/v2/base/variables"
+
+=fa($size, $dimensions)
+  display: inline-block
+  font-size: $size
+  height: $dimensions
+  line-height: $dimensions
+  text-align: center
+  vertical-align: top
+  width: $dimensions
+
+=button($font-color, $bg-color, $border-color:transparent, $bg-hoverable: true)
+  color: $font-color
+  border: 1px solid $border-color
+  background-color: $bg-color
+
+  &:hover, &--active
+    color: $font-color
+    border-color: darken($border-color, 10)
+    @if $bg-hoverable
+      background-color: darken($bg-color, 4)
+
+=from($device)
+  @media screen and (min-width: $device)
+    @content
+
+=until($device)
+  @media screen and (max-width: $device - 1px)
+    @content
+
+=mobile
+  @media screen and (max-width: $tablet - 1px)
+    @content
+
+=tablet
+  @media screen and (min-width: $tablet), print
+    @content
+
+=tablet-only
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px)
+    @content
+
+=touch
+  @media screen and (max-width: $desktop - 1px)
+    @content
+
+=desktop
+  @media screen and (min-width: $desktop)
+    @content
+
+=desktop-only
+  @media screen and (min-width: $desktop) and (max-width: $widescreen - 1px)
+    @content
+
+=widescreen
+  @media screen and (min-width: $widescreen)
+    @content
+
+=widescreen-only
+  @media screen and (min-width: $widescreen) and (max-width: $fullhd - 1px)
+    @content
+
+=fullhd
+  @media screen and (min-width: $fullhd)
+    @content
