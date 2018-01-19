@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import { Scrollbars } from "react-custom-scrollbars";
 
 import Item from "./item";
 import "./style.sass";
@@ -28,20 +29,23 @@ export default class History extends Component {
 
     return (
       <section className={`${this.className}`}>
-        <div className="has-text-centered">
-          <button className="button is-success is-rounded">
+        <Scrollbars>
+          <div className={`${this.className}__items`}>
+              <div className={`${this.className}__add`}>
+                <button className="button is-green is-icon">
                 <span className="icon">
                   <i className="fas fa-plus"></i>
                 </span>
-          </button>
-        </div>
-        <div className={`${this.className}__items`}>
-            {
-              items.map((el, i) =>{
-                return <Item key={i} name={el.name} date={el.date}/>;
-              })
-            }
-        </div>
+                </button>
+              </div>
+
+              {
+                items.map((el, i) =>{
+                  return <Item key={i} name={el.name} date={el.date}/>;
+                })
+              }
+          </div>
+        </Scrollbars>
       </section>
     );
   }

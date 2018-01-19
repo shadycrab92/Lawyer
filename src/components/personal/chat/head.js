@@ -6,10 +6,10 @@ const ChatHead = (props) => {
   return (
     <div className={className}>
       <div className={`${className}__buttons`}>
-        <span className="button is-primary">Чат</span>
-        <span className="button">Файлы</span>
-        <span className="button">Календарь</span>
-        <span className="button">Описание</span>
+        <button className="is-blue">Чат</button>
+        <button>Файлы</button>
+        <button>Календарь</button>
+        <button>Описание</button>
       </div>
 
       <div className={`${className}__stats`}>

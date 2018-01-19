@@ -10,12 +10,15 @@ button, .button
   border-radius: $border-radius
   cursor: pointer
   vertical-align: top
+  border: 1px solid transparent
 
-  &.is-default
-    +button($black, $white, $grey, false)
+  &+button, +.button
+    margin-left: $gap--sm
+
+  +button($black, $white, $grey, false)
 
   &.is-transparent
-    +button($white, $white--transparenter)
+    +button($white--transparent, $white--transparenter)
 
     &:hover
       background-color: transparentize($white, 0.8)
@@ -40,6 +43,9 @@ button, .button
     padding: $button-padding
     background-color: transparent
     border-radius: 0
+    font-weight: 500
+    margin-left: 0
+    border: none
 
     &:hover
       background-color: $black--transparenter
@@ -47,14 +53,15 @@ button, .button
     &.active
       color: $black
       background-color: transparent
-      box-shadow: inset 0 -4px 0 $purple
+      box-shadow: inset 0 -4px 0 $purple--dark
 
   &.is-brand
-    color: $white
+    color: $white--transparent
     padding: $button-padding
     background-color: transparent
     border-radius: 0
-    font-weight: bold
+    font-weight: 500
+    border: none
 
     &:hover
       background-color: $black--transparenter

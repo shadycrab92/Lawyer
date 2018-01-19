@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import { Scrollbars } from "react-custom-scrollbars";
 
 import Item from "./item";
 import "./style.sass";
@@ -34,6 +35,7 @@ export default class Projects extends Component {
 
     return (
       <section className={`${this.className}`}>
+        <Scrollbars>
         <div className={`${this.className}__add`}>
           <button className="button is-icon is-transparent">
               <span className="icon">
@@ -48,6 +50,7 @@ export default class Projects extends Component {
               })
             }
         </div>
+        </Scrollbars>
       </section>
     );
   }

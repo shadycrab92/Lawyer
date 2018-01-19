@@ -1,0 +1,16 @@
+@import "styles/v2/base/variables"
+@import "styles/v2/base/mixins"
+
+input[type="text"], textarea
+  padding: $gap--sm
+  width: 100%
+  max-width: 100%
+  border-color: $grey
+  border-radius: $border-radius
+
+  &:hover
+    border-color: darken($grey, 10)
+
+textarea
+  height: 100px
+  resize: vertical

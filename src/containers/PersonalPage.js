@@ -15,14 +15,8 @@ const PersonalPage = () => {
         <Projects/>
       </div>
       <div className="pageContent pageContent--withFixedLeftContent">
-        <div className="columns">
-          <div className="column is-3">
-
-          </div>
-          <div className="column is-6">
-
-          </div>
-        </div>
+        <History/>
+        <Chat/>
       </div>
     </div>
   );

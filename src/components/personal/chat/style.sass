@@ -1,61 +1,80 @@
-@import "styles/variables"
+@import "styles/v2/base/variables"
 
 .chat
-  height: 100%
-  position: relative
-  padding: 0 $padding $padding--lg 0
+  position: absolute
+  top: 51px
+  left: 25%
+  right: 0
+  bottom: 0
+  margin-left: 25%
+  padding: 0 $gap
 
   &__hr
-    margin: -1px 0 $padding 0
+    margin: -1px 0 $gap 0
+
+  &__itemsWrap
+    position: absolute
+    overflow: auto
+    top: 95px
+    bottom: 157px
+    right: $gap
+    left: $gap
 
   &__items
-    padding: $padding 0
+    padding: $gap $gap $gap 0
 
   &__form
     position: absolute
-    left: 0
-    right: $padding
-    bottom: $padding
+    left: $gap
+    right: $gap
+    bottom: $gap
+
 
   &Item
-    margin-bottom: $padding
+    margin-bottom: $gap
 
     &--right
+      &:after
+        content: ""
+        display: table
+        clear: both
+
       .chatItem__body
         text-align: right
         float: right
 
       .chatItem__text
-        background: $blue-light
+        background: $blue--lighter
 
     &__body
       max-width: 90%
 
     &__head
-      margin-bottom: 0.2rem
-      font-size: $font--xs
+      margin-bottom: 0.4rem
+      font-size: $font--sm
+
+    &__name
+      font-weight: 500
 
     &__date
-      padding-left: $padding--sm
+      padding-left: $gap--sm
 
     &__text
       border-radius: 3px
-      padding: $padding--sm
-      background: $grey-lighter
-      font-size: $font--sm
+      padding: $gap
+      background: $grey--lighter
 
     &__image
       overflow: hidden
       border-radius: 100%
 
   &Head
-    padding: $padding 0
+    padding: $gap 0
 
     &__stats
-      font-size: $font--sm
       display: inline-block
       padding: 0.75em 0 0 0
 
     &__buttons
       .button
-        margin-right: $padding--sm
+        margin-right: $gap--sm

@@ -15,9 +15,9 @@ const ChatItem = (props) => {
           <div className="content">
             <div className={`${className}__body`}>
               <div className={`${className}__head`}>
-                <strong>
+                <span className={`${className}__name`}>
                   {props.name}
-                </strong>
+                </span>
                 <span className={`${className}__date`}>
                   {props.date}
                 </span>

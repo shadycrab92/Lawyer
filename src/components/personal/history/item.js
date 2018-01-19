@@ -6,9 +6,9 @@ const HistoryItem = (props) => {
   return (
     <div className={`${className}`}>
       <div className={`${className}__head`}>
-        <p>
+        <p className={`${className}__title`}>
           {props.name}
-          <span className={`icon is-small ${className}__edit`}>
+          <span className={`icon ${className}__edit`}>
             <i className="fas fa-edit"></i>
           </span>
         </p>
@@ -16,7 +16,7 @@ const HistoryItem = (props) => {
           {props.date}
         </p>
 
-        <span className={`icon is-small ${className}__point`}>
+        <span className={`${className}__point`}>
           <i className="fas fa-dot-circle"></i>
         </span>
       </div>

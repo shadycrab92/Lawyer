@@ -1,43 +1,41 @@
-@import "styles/variables"
+@import "styles/v2/base/variables"
 
 .history
-  height: 100%
-  padding: $padding $padding $padding $padding--lg
-  position: relative
+  position: absolute
+  top: 51px
+  bottom: 0
+  width: 25%
+  max-width: 400px
+  overflow: auto
+  border-right: 1px solid $grey
 
   &:before
     content: ""
     width: 5px
     margin-left: 0
     position: absolute
-    left: 0
-    top: $padding
+    top: 0
     bottom: 0
+    left: $gap
     background-color: $grey
     z-index: 0
 
-  &:after
-    content: ""
-    width: 1px
-    margin-left: 0
-    position: absolute
-    right: -5px
-    top: $padding
-    bottom: 0
-    background-color: $grey
-    z-index: 0
+  &__add
+    text-align: center
 
+  &__items
+    padding: $gap
+    padding-left: 3em
 
   &Item
-    margin-top: $padding
+    margin-top: $gap
 
     &__head
-      font-size: $font--sm
       color: $white
       background: $green
       border-radius: 3px
       position: relative
-      padding: $padding--sm $padding
+      padding: $gap--sm $gap
 
       &:before
         content: ""
@@ -55,26 +53,34 @@
     &__point
       position: absolute
       top: 50%
-      left: -29px
+      left: -33px
       margin-top: -8px
       color: $green
+      font-size: $font--lg
       background: $white
       border-radius: 100%
+      width: 16px
+      height: 16px
 
     &__edit
-      font-size: $font--xs
+      font-size: $font--sm
       float: right
-      margin-right: -2px
-      margin-top: 2px
+      margin-right: -3px
+      margin-top: 4px
+
+    &__title
+      font-weight: 500
+      margin-bottom: 5px
 
     &__date
       font-size: $font--xs
 
     &__notices
-      padding: $padding--sm
+      padding: $gap--sm
 
       &Item
-        font-size: $font--xs
+        color: $grey--darker
+        font-size: $font--sm
 
         &:before
           content: '-'
