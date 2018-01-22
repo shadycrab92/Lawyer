@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import { Scrollbars } from "react-custom-scrollbars";
+import classNames from "classnames";
 
 import Item from "./item";
 import "./style.sass";
@@ -26,9 +27,12 @@ export default class History extends Component {
       },
     ];
 
+    const className = classNames(this.className, {
+      [`${this.className}--relative`]: this.props.isRelative
+    });
 
     return (
-      <section className={`${this.className}`}>
+      <section className={className}>
         <Scrollbars>
           <div className={`${this.className}__items`}>
               <div className={`${this.className}__add`}>

@@ -1,0 +1,36 @@
+@import "styles/v2/base/variables"
+@import "styles/v2/base/mixins"
+
+.personalHead
+  padding-bottom: $gap
+
+  &__stats
+    padding: 0.75em 0 0 0
+
+  &__buttons
+    .button
+      margin-right: $gap--sm
+
+  &__selectProject
+    display: none
+    cursor: pointer
+    color: $white--transparent
+    font-weight: 500
+    line-height: 23px
+    background-color: $blue
+    padding: $gap
+    margin-bottom: $gap
+    border-radius: 4px
+
+    &:hover
+      background-color: $blue--dark
+
+    +until($desktop)
+      display: block
+
+  &__selectProjectText
+    float: right
+    font-weight: normal
+    .icon
+      position: relative
+      bottom: -2px

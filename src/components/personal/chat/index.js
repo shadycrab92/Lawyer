@@ -2,7 +2,9 @@ import React, {Component} from "react";
 import { Scrollbars } from "react-custom-scrollbars";
 
 import Item from "./item";
-import Head from "./head";
+import Head from "components/personal/head";
+import History from "components/personal/history";
+
 import "./style.sass";
 
 export default class Chat extends Component {
@@ -67,6 +69,7 @@ export default class Chat extends Component {
       <section className={`${this.className}`}>
         <Head/>
         <hr className={`${this.className}__hr`}/>
+
         <div className={`${this.className}__itemsWrap`}>
           <Scrollbars>
             <div className={`${this.className}__items`}>

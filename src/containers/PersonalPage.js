@@ -18,6 +18,7 @@ const PersonalPage = () => {
         <History/>
         <Chat/>
       </div>
+      <div className="pageFixedLeftContentFader"/>
     </div>
   );
 };

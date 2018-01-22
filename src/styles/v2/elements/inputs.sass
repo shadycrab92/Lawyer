@@ -1,16 +1,46 @@
 @import "styles/v2/base/variables"
 @import "styles/v2/base/mixins"
 
-input[type="text"], textarea
+input[type="text"], .input, textarea
   padding: $gap--sm
   width: 100%
+  font-size: $font
   max-width: 100%
-  border-color: $grey
+  border: 1px solid $grey
   border-radius: $border-radius
 
   &:hover
     border-color: darken($grey, 10)
 
+  &.is-transparent
+    padding: $gap--sm 0
+    color: $white--transparent
+    border: none
+    border-bottom: 2px solid $white--transparent
+    border-radius: 0
+    background-color: transparent
+    +placeholder-color($white--transparent)
+
+    &:hover, &:focus
+      color: $white
+      border-color: $white
+      +placeholder-color($white)
+
+      &+.icon
+        color: $white
+
+    &+.icon
+      color: $white--transparent
+
 textarea
   height: 100px
   resize: vertical
+
+
+.inputWrap
+  position: relative
+
+  .icon
+    right: 0
+    top: 4px
+    position: absolute

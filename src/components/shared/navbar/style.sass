@@ -1,4 +1,5 @@
 @import "styles/v2/base/variables"
+@import "styles/v2/base/mixins"
 
 .nav
   max-width: 1500px
@@ -8,6 +9,8 @@
     width: 25%
     padding: 0 $gap--sm
     background-color: $purple--dark
+    +until($desktop)
+      width: 100%
 
   &__right
     display: inline-block
@@ -15,3 +18,5 @@
     padding: 0 $gap
     background-color: $white
     border-bottom: 1px solid $grey
+    +until($desktop)
+      width: 100%

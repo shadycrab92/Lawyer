@@ -36,13 +36,19 @@ export default class Projects extends Component {
     return (
       <section className={`${this.className}`}>
         <Scrollbars>
-        <div className={`${this.className}__add`}>
-          <button className="button is-icon is-transparent">
+        <div className={`${this.className}__search`}>
+          <div className="inputWrap">
+            <input className="input is-transparent" type="text" placeholder="Поиск"/>
+          </div>
+          <span className={`${this.className}__add`}>
+            <button className="button is-icon is-transparent is-clear">
               <span className="icon">
                 <i className="fas fa-plus"></i>
               </span>
-          </button>
+            </button>
+          </span>
         </div>
+
         <div className={`${this.className}__items`}>
             {
               items.map((el, i) =>{

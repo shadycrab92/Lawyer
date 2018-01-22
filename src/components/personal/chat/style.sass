@@ -1,4 +1,5 @@
 @import "styles/v2/base/variables"
+@import "styles/v2/base/mixins"
 
 .chat
   position: absolute
@@ -7,7 +8,12 @@
   right: 0
   bottom: 0
   margin-left: 25%
-  padding: 0 $gap
+  padding: $gap
+
+  +until($desktop)
+    top: 101px
+    left: 0
+    margin-left: 0
 
   &__hr
     margin: -1px 0 $gap 0
@@ -19,6 +25,10 @@
     bottom: 157px
     right: $gap
     left: $gap
+    padding-top: $gap
+
+    +until($desktop)
+      top: 160px
 
   &__items
     padding: $gap $gap $gap 0
@@ -67,14 +77,3 @@
     &__image
       overflow: hidden
       border-radius: 100%
-
-  &Head
-    padding: $gap 0
-
-    &__stats
-      display: inline-block
-      padding: 0.75em 0 0 0
-
-    &__buttons
-      .button
-        margin-right: $gap--sm

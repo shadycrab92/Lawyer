@@ -55,6 +55,9 @@ hr
       position: relative
       padding-left: 25%
 
+      +until($desktop)
+        padding-left: 0
+
 
   &FixedLeftContent
     position: fixed
@@ -63,6 +66,21 @@ hr
     width: 25%
     max-width: 375px
     z-index: 9999
+
+    +until($desktop)
+      top: 101px
+      display: none
+      width: 95%
+
+  &FixedLeftContentFader
+    display: none
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: rgba($black, 0.86)
+    z-index: 1
 
 
 .is-pulled-right

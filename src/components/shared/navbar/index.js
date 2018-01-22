@@ -18,10 +18,10 @@ export default class Navbar extends Component {
           </a>
         </div>
         <div className={`${this.className}__right`}>
-          <a className="button is-nav active" href="#">
+          <a className="button is-nav" href="#">
             Главная
           </a>
-          <a className="button is-nav" href="#">
+          <a className="button is-nav active" href="#">
             Проекты
           </a>
           <a className="button is-nav" href="#">

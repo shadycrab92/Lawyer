@@ -20,6 +20,15 @@ button, .button
   &.is-transparent
     +button($white--transparent, $white--transparenter)
 
+    &.is-clear
+      border: none
+      background-color: transparent
+
+      &:hover
+        color: $white
+        background-color: transparent
+
+
     &:hover
       background-color: transparentize($white, 0.8)
 
@@ -93,7 +102,6 @@ button, .button
 
       .icon
         font-size: $font--lg
-
 
   &.is-round
     border-radius: $border-radius * 2
