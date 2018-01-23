@@ -3,12 +3,17 @@
 
 .nav
   max-width: 1500px
+  display: flex
+
+  +until($desktop)
+    display: block
 
   &__left
     display: inline-block
     width: 25%
     padding: 0 $gap--sm
     background-color: $purple--dark
+
     +until($desktop)
       width: 100%
 
@@ -18,5 +23,13 @@
     padding: 0 $gap
     background-color: $white
     border-bottom: 1px solid $grey
+    white-space: nowrap
+    overflow: auto
+    height: 50px
+
+    +until($tablet)
+      text-align: center
+      padding: 0
+
     +until($desktop)
       width: 100%

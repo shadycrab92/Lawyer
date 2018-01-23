@@ -1,4 +1,5 @@
 import React from "react";
+import Scrollbars from "components/shared/ui/scrollBars";
 
 import "./style.sass";
 
@@ -18,11 +19,12 @@ const PersonalHead = (props) => {
       </div>
 
       <div className={`${className}__buttons`}>
-        <button className="is-blue">Чат</button>
-        <button>История</button>
-        <button>Файлы</button>
-        <button>Календарь</button>
-        <button>Описание</button>
+        <Scrollbars>
+          <button className="is-blue">Чат</button>
+          <button className="is-hidden-desktop">История</button>
+          <button>Файлы</button>
+          <button>События</button>
+        </Scrollbars>
       </div>
 
       <div className={`${className}__stats`}>

@@ -4,10 +4,16 @@
 .personalHead
   padding-bottom: $gap
 
-  &__stats
-    padding: 0.75em 0 0 0
-
   &__buttons
+    white-space: nowrap
+    overflow: auto
+    height: 50px
+    margin-bottom: $gap
+
+    +until($tablet)
+      text-align: center
+      padding: 0
+
     .button
       margin-right: $gap--sm
 

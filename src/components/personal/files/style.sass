@@ -1,0 +1,110 @@
+@import "styles/v2/base/variables"
+@import "styles/v2/base/mixins"
+
+.history
+  position: absolute
+  top: 51px
+  bottom: 0
+  width: 25%
+  max-width: 400px
+  overflow: auto
+  border-right: 1px solid $grey
+  +until($desktop)
+    display: none
+
+  &:before
+    content: ""
+    width: 5px
+    margin-left: 0
+    position: absolute
+    top: 0
+    bottom: 0
+    left: $gap
+    background-color: $grey
+    z-index: 0
+
+  &__add
+    text-align: center
+
+  &__items
+    padding: $gap
+    padding-left: 3em
+
+  &Item
+    margin-top: $gap
+
+    &__head
+      color: $white
+      background: $green
+      border-radius: 3px
+      position: relative
+      padding: $gap--sm $gap
+
+      &:before
+        content: ""
+        display: block
+        width: 0
+        height: 0
+        position: absolute
+        border-top: 8px solid transparent
+        border-bottom: 8px solid transparent
+        border-right: 8px solid $green
+        left: -8px
+        top: 50%
+        margin-top: -8px
+
+    &__point
+      position: absolute
+      top: 50%
+      left: -33px
+      margin-top: -8px
+      color: $green
+      font-size: $font--lg
+      background: $white
+      border-radius: 100%
+      width: 16px
+      height: 16px
+
+    &__edit
+      font-size: $font--sm
+      float: right
+      margin-right: -3px
+      margin-top: 4px
+
+    &__title
+      font-weight: 500
+      margin-bottom: 5px
+
+    &__date
+      font-size: $font--xs
+
+    &__notices
+      padding: $gap--sm
+
+      &Item
+        color: $grey--darker
+        font-size: $font--sm
+
+        &:before
+          content: '-'
+          padding-right: 3px
+
+  &--relative
+    display: block
+    position: absolute
+    top: 155px
+    left: 0
+    right: 0
+    bottom: 0
+    margin-left: 0
+    padding: $gap
+    max-width: none
+    width: auto
+
+    &:before
+      top: $gap
+      left: $gap--lg
+
+    .historyItem__point
+      left: -40px
+
